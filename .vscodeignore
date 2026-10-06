@@ -1,6 +1,7 @@
 .vscode/**
 .vscode-test/**
 .vite-hooks/**
+.github/**
 dist/test/**
 node_modules/**
 src/**
