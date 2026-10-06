@@ -1,47 +1,58 @@
 {
-  "name": "vscode-vp",
-  "version": "0.0.0",
-  "description": "A starter for creating a TypeScript package.",
-  "homepage": "https://github.com/author/library#readme",
-  "bugs": {
-    "url": "https://github.com/author/library/issues"
-  },
-  "license": "MIT",
-  "author": "Author Name <author.name@mail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/author/library.git"
-  },
+  "name": "your-id-here",
+  "displayName": "Your Display Name Here",
+  "version": "0.0.1",
+  "description": "Your description here.",
+  "categories": [
+    "Other"
+  ],
   "files": [
     "dist"
   ],
   "type": "module",
+  "main": "./dist/extension.mjs",
+  "module": "./dist/extension.mjs",
+  "types": "./dist/extension.d.mts",
   "exports": {
-    ".": "./dist/index.mjs",
+    "./extension": "./dist/extension.mjs",
+    "./test/extension.test": "./dist/test/extension.test.mjs",
     "./package.json": "./package.json"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "scripts": {
     "build": "vp pack",
-    "dev": "vp pack --watch",
-    "test": "vp test",
+    "dev": "vp pack --sourcemap --watch",
+    "test": "vscode-test",
     "check": "vp check",
     "prepublishOnly": "vp run build",
     "prepare": "vp config"
   },
   "devDependencies": {
+    "@types/mocha": "^10.0.10",
     "@types/node": "^26.1.1",
+    "@types/vscode": "^1.140.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.1.0",
     "bumpp": "^11.1.0",
     "typescript": "^7.0.2",
     "vite-plus": "catalog:"
   },
+  "contributes": {
+    "commands": [
+      {
+        "command": "your-id-here.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "activationEvents": [],
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "12.9.1",
       "onFail": "download"
     }
+  },
+  "engines": {
+    "vscode": "^1.140.0"
   }
 }

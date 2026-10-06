@@ -10,11 +10,15 @@ export default defineConfig({
       // Remove to preserve subpath imports as written (the new default).
       // https://tsdown.dev/options/dependencies#deps-resolvedepsubpath
       resolveDepSubpath: true,
+      neverBundle: ["vscode"],
     },
     dts: {
       generator: "tsgo",
     },
-    exports: true,
+    entry: ["src/extension.ts", "src/test/**/*.test.ts"],
+    exports: {
+      legacy: true,
+    },
   },
   lint: {
     options: {
