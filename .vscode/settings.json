@@ -30,4 +30,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "explicit"
   }
+
+  // Uncomment if using the Typescript 7 preview extension
+  // "js/ts.experimental.useTsgo": true,
+  // "js/ts.tsdk.path": "./node_modules/typescript"
 }

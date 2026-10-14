@@ -1,5 +1,10 @@
 {
   // See http://go.microsoft.com/fwlink/?LinkId=827846
   // for the documentation about the extensions.json format
-  "recommendations": ["VoidZero.vite-plus-extension-pack", "ms-vscode.extension-test-runner"]
+  "recommendations": [
+    // Uncomment if using the Typescript 7 preview extension
+    "typescriptteam.native-preview",
+    "VoidZero.vite-plus-extension-pack",
+    "ms-vscode.extension-test-runner"
+  ]
 }
